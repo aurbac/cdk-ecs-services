@@ -1,6 +1,5 @@
 import * as cdk from '@aws-cdk/core';
 import * as codecommit from '@aws-cdk/aws-codecommit';
-import * as cloudformation from '@aws-cdk/aws-cloudformation';
 
 interface GitStackProps{
   repositoryName: string;
