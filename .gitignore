@@ -10,3 +10,7 @@ cdk.out
 # Parcel build directories
 .cache
 .build
+bin/.DS_Store
+test/.DS_Store
+lib/.DS_Store
+.DS_Store

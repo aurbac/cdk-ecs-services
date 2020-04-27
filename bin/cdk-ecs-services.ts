@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { CdkEcsServicesStack } from '../lib/cdk-ecs-services-stack';
+import { EcsAppStack } from '../lib/ecs-app-stack';
 
 const app = new cdk.App();
-new CdkEcsServicesStack(app, 'CdkEcsServicesStack');
+
+new EcsAppStack(app, 'App1', { 
+    appName: 'app1',
+    env: { region: 'us-east-2' } 
+});
+
+/*new EcsAppStack(app, 'App2', { 
+    appName: 'app2',
+    env: { region: 'us-west-2' } 
+});*/
+
+app.synth();
